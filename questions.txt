@@ -1,0 +1,8 @@
+Question 5
+-	plot of error and timings
+
+
+Question 10
+-	memory req for single and multi-process with n>>1
+
+GitHub?

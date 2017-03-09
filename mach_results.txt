@@ -1,0 +1,12 @@
+mach1 run on 4 processes with n = 100 000 000
+real	0m46.259s
+
+mach1allreduce run on 4 processes with n = 100 000 000
+real	0m44.399s
+
+mach1reduc run on 4 processes with n = 100 000 000
+real	0m46.284s
+
+mach2 run on 4 threads with n = 100 000 000
+real	0m10.441s
+
