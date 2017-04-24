@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/paulineh/TMA4280/project2/poisson/poisson.c
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c
 stdlib.h
 -
 stdio.h

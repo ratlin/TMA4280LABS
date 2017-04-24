@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_Fortran
-  "/home/paulineh/TMA4280/project2/poisson/poisson.f90" "/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/poisson-f.dir/poisson.f90.o"
+  "/home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.f90" "/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/poisson-f.dir/poisson.f90.o"
   )
 set(CMAKE_Fortran_COMPILER_ID "GNU")
 
@@ -24,7 +24,7 @@ set(CMAKE_Fortran_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/common.dir/DependInfo.cmake"
+  "/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/common.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

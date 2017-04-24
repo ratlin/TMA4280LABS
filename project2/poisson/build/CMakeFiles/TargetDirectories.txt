@@ -1,5 +1,5 @@
-/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/edit_cache.dir
-/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/common.dir
-/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/poisson-f.dir
-/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/poisson.dir
-/home/paulineh/TMA4280/project2/poisson/build/CMakeFiles/rebuild_cache.dir
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/edit_cache.dir
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/common.dir
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/poisson-f.dir
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/poisson.dir
+/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles/rebuild_cache.dir
