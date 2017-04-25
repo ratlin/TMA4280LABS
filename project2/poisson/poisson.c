@@ -15,6 +15,7 @@
 #include <math.h>
 #include <mpi.h>
 #include <omp.h>
+#include <memory.h>
 
 #define PI 3.14159265358979323846
 #define true 1
@@ -26,7 +27,6 @@ typedef int bool;
 // Function prototypes
 real *mk_1D_array(size_t n, bool zero);
 real **mk_2D_array(size_t n1, size_t n2, bool zero);
-// INPUT TO TRANSPOSE MUST CHANGE
 void transpose(real **bt, real **b, size_t m);
 void mpi_transpose(real **bt, real **b, int *send_displ, int *displ, int *send_count, int m, int num_col, real *send_buf, real *rec_buf, int rank, int nprocs);
 real rhs(real x, real y);
@@ -41,6 +41,7 @@ int main(int argc, char **argv)
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	int num_threads = omp_get_max_threads();
 	double global_u_max = 0;
+	FILE *f;
 
     if (argc < 2) {
         printf("Usage:\n");
@@ -53,6 +54,7 @@ int main(int argc, char **argv)
     if (rank == 0)
     {
     	start_time = MPI_Wtime();
+    	f = fopen("results.txt", "a");
     }
 
     // The number of grid points in each direction is n+1
@@ -154,14 +156,14 @@ int main(int argc, char **argv)
 
     // Calculate maximal value of solution
     double u_max = 0.0;
-    double current_max;
+    double temp_val;
     #pragma omp parallel for schedule(static)
     for (size_t i = 0; i < num_col; i++) {
         for (size_t j = 0; j < m; j++) {
-        	current_max = b[i][j] - sin(PI*(grid[displ[rank]+1]))*sin(2.0*PI*grid[j]);
-        	if (current_max > u_max)
+        	temp_val = b[i][j] - sin(PI*(grid[displ[rank]+i]))*sin(2.0*PI*grid[j]);
+        	if (temp_val > u_max)
         	{
-        		u_max = current_max;
+        		u_max = temp_val;
         	}
         }
     }
@@ -170,7 +172,9 @@ int main(int argc, char **argv)
 
     if (rank == 0)
     {
-    	printf("u_max = %e\n", global_u_max);
+    	fprintf(f, "%e\t", global_u_max);
+    	real time_elapsed = MPI_Wtime() - start_time;
+    	fprintf(f, "%1.16f\n", time_elapsed);
     }
 
     MPI_Finalize();
@@ -180,11 +184,10 @@ int main(int argc, char **argv)
 real rhs(real x, real y) {
 	// CHANGE BETWEEN: 	return 5*PI*PI*sin(PI*x)*sin(2.0*PI*y);
     //					return 2 * (y - y*y + x - x*x);
-    return 5*PI*PI*sin(PI*x)*sin(2.0*PI*y);
+    //					return exp(x)*sin(2*PI*x)*sin(2*PI*y);
+    return 5.0*PI*PI*sin(PI*x)*sin(2.0*PI*y);
 }
 
-
-// POSSIBLY MAKE ANOTHER RHS WITH RETURN VALUE: sin(PI*x)*sin(2.0*PI*y)
 
 void transpose(real **bt, real **b, size_t m)
 {

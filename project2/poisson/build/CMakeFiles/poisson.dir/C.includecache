@@ -17,6 +17,8 @@ mpi.h
 -
 omp.h
 -
+memory.h
+-
 
 /usr/lib/openmpi/include/mpi.h
 stddef.h

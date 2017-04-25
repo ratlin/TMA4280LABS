@@ -60,15 +60,15 @@ include CMakeFiles/common.dir/flags.make
 CMakeFiles/common.dir/fst.f.o: CMakeFiles/common.dir/flags.make
 CMakeFiles/common.dir/fst.f.o: ../fst.f
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building Fortran object CMakeFiles/common.dir/fst.f.o"
-	/usr/bin/gfortran  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f -o CMakeFiles/common.dir/fst.f.o
+	/usr/bin/mpif90  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -c /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f -o CMakeFiles/common.dir/fst.f.o
 
 CMakeFiles/common.dir/fst.f.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing Fortran source to CMakeFiles/common.dir/fst.f.i"
-	/usr/bin/gfortran  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f > CMakeFiles/common.dir/fst.f.i
+	/usr/bin/mpif90  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -E /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f > CMakeFiles/common.dir/fst.f.i
 
 CMakeFiles/common.dir/fst.f.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling Fortran source to assembly CMakeFiles/common.dir/fst.f.s"
-	/usr/bin/gfortran  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f -o CMakeFiles/common.dir/fst.f.s
+	/usr/bin/mpif90  $(Fortran_DEFINES) $(Fortran_INCLUDES) $(Fortran_FLAGS) -S /home/paulineh/TMA4280/gitLABS4280/project2/poisson/fst.f -o CMakeFiles/common.dir/fst.f.s
 
 CMakeFiles/common.dir/fst.f.o.requires:
 

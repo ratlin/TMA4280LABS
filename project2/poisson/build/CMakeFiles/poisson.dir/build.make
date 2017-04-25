@@ -60,15 +60,15 @@ include CMakeFiles/poisson.dir/flags.make
 CMakeFiles/poisson.dir/poisson.c.o: CMakeFiles/poisson.dir/flags.make
 CMakeFiles/poisson.dir/poisson.c.o: ../poisson.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulineh/TMA4280/gitLABS4280/project2/poisson/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/poisson.dir/poisson.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/poisson.dir/poisson.c.o   -c /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c
+	/usr/bin/mpicc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/poisson.dir/poisson.c.o   -c /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c
 
 CMakeFiles/poisson.dir/poisson.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/poisson.dir/poisson.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c > CMakeFiles/poisson.dir/poisson.c.i
+	/usr/bin/mpicc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c > CMakeFiles/poisson.dir/poisson.c.i
 
 CMakeFiles/poisson.dir/poisson.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/poisson.dir/poisson.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c -o CMakeFiles/poisson.dir/poisson.c.s
+	/usr/bin/mpicc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paulineh/TMA4280/gitLABS4280/project2/poisson/poisson.c -o CMakeFiles/poisson.dir/poisson.c.s
 
 CMakeFiles/poisson.dir/poisson.c.o.requires:
 
